@@ -32,14 +32,12 @@ Algoritmo "palindromo"
 var letra, pilha, invertida, palavra: caractere
 var topo, Max, i, tam : inteiro
 var ehPalindromo : logico
-vetor palavra[20]
-vetor invertida[20]
-vetor pilha[20]
 
 Inicio
 topo <- -1
 Max <- 20
 tam <- 0
+vetor palavra[Max], invertida[Max], pilha[Max]
 ehPalindromo <- verdadeiro
 
 escreval("Digite a palavra (ENTER para finalizar):")
