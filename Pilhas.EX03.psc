@@ -41,7 +41,7 @@ Algoritmo "Inverter_Palavra_Pilha"
 
 var letra : caractere
 var  Pilha : caractere
-var topo, i : inteiro
+var topo, Max : inteiro
 
 Inicio
 topo <- -1 // lista vazia
