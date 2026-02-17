@@ -24,7 +24,7 @@ funcao retorne <- pop()
 fimfuncao 
 
 Algoritmo "eliminar maior e menor"
-var topo, pilha, Max, maior, num, i, menor, topoAux, aux : inteiro
+var topo, pilha, Max, maior, num, num2, i, menor, topoAux, aux, receba, i : inteiro
 
 Inicio
 topo <- -1
@@ -69,17 +69,28 @@ escreval(" ")
 
 //Enquanto topo for diferente de vazio desempilhar os elementos 
 Enquanto (topo <> -1) faca
-   num <- pop()
+   num2 <- pop()
    
    //Verificando se os elementos desempilhandos são diferentes do maior e menor valor, se forem iremos adicionar os elementos a minha nova pilha 
-   Se (num <> menor) e (num <> maior) entao 
+   Se (num2 <> menor) e (num2 <> maior) entao 
       topoAux <- topoAux + 1
-      Aux[topoAux] <- num
+      Aux[topoAux] <- num2
    FimSe 
 FimEnquanto 
 
+//Ordenando vetores em ordem crescente
+para i de 0 ate topoAux - 1 faca
+ para j de i+1 ate topoAux faca 
+   Se (aux[i] > aux[j]) entao 
+      receba <- aux[i]
+      aux[i] <- aux[j]
+      aux[j] <- receba
+   FimSe 
+ fimpara
+fimpara 
+
 //Exibindo a pilha nova que não contém o maior e o menor valor
-escreval("Pilha sem o maior e o menor valor:")
+escreval("Pilha sem o maior e o menor valor ordenada:")
 para i de 0 ate topoAux faca
    escreva("[",aux[i],"]")
 fimpara 
