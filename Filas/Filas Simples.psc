@@ -48,6 +48,59 @@ FimSe
 fimfuncao 
 
 //Tamanho total da fila
+funcao retorne <- Size()
+Se (inic = -1) entao 
+   escreval("Pilha vazia")
+Senao 
+   retorne <- fim - inic + 1
+FimSe 
+fimfuncao 
+
+Algoritmo "Fila Simples"
+var inic, fim, fila, max, i : inteiro 
+
+Inicio 
+
+inic <- 0
+fim <- -1
+Max <- 10
+vetor fila[Max]
+
+//------+----------
+//Função principal 
+//------+----------
+
+ENQUEUE(10)
+ENQUEUE(20)
+DEQUEUE()
+ENQUEUE(30)
+DEQUEUE()
+ENQUEUE(50)
+
+escreval("Começo: ", Head())
+Escreval("Fila Vazia: ", EMPTY())
+escreval("Tamanho da fila: ", Size())
+escreval("----------------------------")
+escreva("Fila Original: ")
+para i de 0 ate fim faca
+   escreva("[",fila[i],"]")
+fimpara 
+
+
+FimAlgoritmo
+//Pegar o começo 
+funcao retorne <- Head()
+ var retorne : inteiro 
+
+//Verifica se está vazia senao só retorna o começo da fila
+Se (EMPTY()) entao 
+   escreval("Fila Vazia")
+Senao 
+   retorne <- fila[inic]
+FimSe 
+fimfuncao 
+
+//Tamanho total da fila
 funcao Size()
 fimfuncao 
 
@@ -64,6 +117,7 @@ vetor fila[Max]
 //------+----------
 //Função principal 
 //------+----------
+
 ENQUEUE(10)
 ENQUEUE(20)
 DEQUEUE()
@@ -76,6 +130,5 @@ escreval ("Fila Original: ")
 para i de 0 ate fim faca
    escreva("[",fila[i],"]")
 fimpara 
-
 
 FimAlgoritmo
