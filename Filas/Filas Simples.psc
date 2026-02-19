@@ -32,6 +32,11 @@ Se (EMPTY()) entao
 Senao 
    retorne <- fila[inic]
    inic <- inic + 1
+   //Reinicia a fila se ficar vazia
+    Se (inic > fim) entao
+       inic <- 0
+       fim <- -1
+    FimSe
 FimSe 
 fimfuncao 
 
@@ -49,8 +54,9 @@ fimfuncao
 
 //Tamanho total da fila
 funcao retorne <- Size()
-Se (inic = -1) entao 
-   escreval("Pilha vazia")
+Se (EMPTY()) entao 
+   escreval("Fila vazia")
+   retorne <- 0
 Senao 
    retorne <- fim - inic + 1
 FimSe 
@@ -81,8 +87,9 @@ escreval("Começo: ", Head())
 Escreval("Fila Vazia: ", EMPTY())
 escreval("Tamanho da fila: ", Size())
 escreval("----------------------------")
+
 escreva("Fila Original: ")
-para i de 0 ate fim faca
+para i de inic ate fim faca
    escreva("[",fila[i],"]")
 fimpara 
 
